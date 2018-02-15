@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import { postNote } from './state/actions';
 import axios from 'axios';
 
-class Countries extends Component {
+class Tracking extends Component {
   constructor(props) {
     super(props);
 
@@ -24,12 +24,9 @@ class Countries extends Component {
 
   render() {
     return (
-      <div>
-        <ul>
-          <li className="heading-nav-entry"><NavLink exact to={`/`} activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>Home</NavLink></li>
-          <li className="heading-nav-entry"><NavLink exact to={`/countries/tracking`} activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>Tracking</NavLink></li>
-        </ul>
-      </div>
+          <div className="card">
+            <h1>Tracking</h1>
+          </div>
     )
   }
 }
@@ -48,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
     },
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Countries);
+export default connect(mapStateToProps, mapDispatchToProps)(Tracking);

@@ -5,19 +5,11 @@
 .App-title {
   font-size: 1.5em;
 }
-/* .playerCtn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
-.playerDsp {
-  text-align: center;
-  margin-top: 10px;
-}
-.tbody {
-  height: 400px;
-}
-.srtBtn {
-  margin: 5px;
+#flag {
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  height: 25%;
+  width: 25%;
 }

@@ -20,10 +20,11 @@ class Blocs extends Component {
         blocMsg: '',
         blocErr: false,
         blocsExist: false,
-        blocs: []
+        blocs: [],
       }
 
     this.getBlocs = this.getBlocs.bind(this)
+
   }
 
   componentDidMount() {
@@ -43,31 +44,19 @@ class Blocs extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">{this.props.title}</h1>
-        </header>
         {this.state.blocsExist &&
-          <form onSubmit={this.onBlocClick}>
-            <div className="row">
-              <div className="small-2 columns">
-                <div className="card">
-                  <div className="row">
-                        {this.state.blocs.map((bloc, idx) => {
-                          return (
-                            <ul key={bloc.id}>
-                              <li id="blocDtls" className="heading-nav-entry"><NavLink exact to={`/${bloc.name}`} activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>{bloc.name}</NavLink></li>
-                            </ul>
-                          )
-                        })}
-                  </div>
-                </div>
-              </div>
-              <div className="small-10 columns">
-              </div>
-            </div>
-          </form>
+          <div className="row">
+            {this.state.blocs.map((bloc, idx) => {
+              return (
+                <ul key={bloc.id}>
+                  <li id={bloc.id} className="heading-nav-entry"><NavLink exact to={`/${bloc.name}`} activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>{bloc.name}</NavLink></li>
+                </ul>
+              )
+            })}
+          </div>
         }
       </div>
     )
