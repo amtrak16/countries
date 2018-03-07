@@ -60,8 +60,8 @@ class BlocList extends Component {
               <div className="card">
                 <img id="flag" src={country.flag}></img>
                 <li key={idx} id={country.numericCode} className="heading-nav-entry"><span class="label info">Country:</span><NavLink exact to={`/countries/${country.name}`} activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>{country.name}</NavLink></li>
-                <p><span class="label info">Capital:</span>{country.capital}</p>
-                <p><span class="label info">Population:</span>{country.population}</p>
+                <p className="cntrydtls"><span class="label info">Capital:</span>{country.capital}</p>
+                <p className="cntrydtls"><span class="label info">Population:</span>{country.population}</p>
               </div>
             )
           })
